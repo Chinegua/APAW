@@ -1,0 +1,12 @@
+package es.upm.miw.webPattern.interceptingFilter;
+
+public class DebugFilter extends Filter {
+
+    @Override
+    public void doFilter(Request request, Response response, FilterChain filterChain) {
+        System.out.println("Debuging pre-process: " + request + "," + response);
+        filterChain.doFilter(request, response);
+        response.getHeaders().put("d","DebugFilter");
+        System.out.println("Debuging post-process: " + request + "," + response);
+    }
+}
