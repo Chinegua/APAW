@@ -1,8 +1,8 @@
-package es.upm.miw.webArchitecture.presentation.controllers;
+package es.upm.miw.webArchitecture.presentation.presenters;
 
 import es.upm.miw.webArchitecture.presentation.models.Model;
 
-public class UI2Controller {
+public class UI2Presenter {
 
     public String process(Model model) {
         return "UI2View";

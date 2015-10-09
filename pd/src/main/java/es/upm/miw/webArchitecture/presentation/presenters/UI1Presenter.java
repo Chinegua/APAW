@@ -1,8 +1,8 @@
-package es.upm.miw.webArchitecture.presentation.controllers;
+package es.upm.miw.webArchitecture.presentation.presenters;
 
 import es.upm.miw.webArchitecture.presentation.models.Model;
 
-public class UI1Controller {
+public class UI1Presenter {
 
     public String process(Model model) {
         model.put("log", "UI1Controller:process");
