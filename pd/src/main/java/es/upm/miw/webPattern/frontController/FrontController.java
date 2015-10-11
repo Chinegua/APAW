@@ -1,5 +1,8 @@
 package es.upm.miw.webPattern.frontController;
 
+import es.upm.miw.http.HttpRequest;
+import es.upm.miw.http.HttpResponse;
+
 public class FrontController {
     private Dispatcher dispatcher;
 
@@ -7,12 +10,12 @@ public class FrontController {
         dispatcher = new Dispatcher();
     }
 
-    public void doGet(Request request, Response response) {
-        dispatcher.get(request, response);
+    public void doGet(HttpRequest request, HttpResponse response) {
+        dispatcher.doGet(request, response);
     }
     
-    public void doPost(Request request, Response response) {
-        dispatcher.post(request, response);
+    public void doPost(HttpRequest request, HttpResponse response) {
+        dispatcher.doPost(request, response);
     }
 
 }

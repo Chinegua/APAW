@@ -1,6 +1,6 @@
 package es.upm.miw.webPattern.frontController;
 
-public class Helper2Controller {
+public class Helper2Presenter {
 
     private int param1;
 

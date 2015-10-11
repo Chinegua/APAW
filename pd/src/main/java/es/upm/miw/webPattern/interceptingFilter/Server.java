@@ -1,13 +1,13 @@
 package es.upm.miw.webPattern.interceptingFilter;
 
-import es.upm.miw.webPattern.HttpStatus;
-import es.upm.miw.webPattern.Request;
-import es.upm.miw.webPattern.Response;
+import es.upm.miw.http.HttpStatus;
+import es.upm.miw.http.HttpRequest;
+import es.upm.miw.http.HttpResponse;
 
 public class Server {
 
-    public Response send(Request request) {
-        Response response = new Response();
+    public HttpResponse send(HttpRequest request) {
+        HttpResponse response = new HttpResponse();
         new FilterManager().doFilter(request, response);
         response.setStatus(HttpStatus.OK);
         return response;

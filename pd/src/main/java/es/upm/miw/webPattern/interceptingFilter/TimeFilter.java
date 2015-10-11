@@ -2,13 +2,13 @@ package es.upm.miw.webPattern.interceptingFilter;
 
 import java.util.Date;
 
-import es.upm.miw.webPattern.Request;
-import es.upm.miw.webPattern.Response;
+import es.upm.miw.http.HttpRequest;
+import es.upm.miw.http.HttpResponse;
 
 public class TimeFilter extends Filter {
 
     @Override
-    public void doFilter(Request request, Response response, FilterChain filterChain) {
+    public void doFilter(HttpRequest request, HttpResponse response, FilterChain filterChain) {
         long requestTime = new Date().getTime();
         System.out.println("Time pre-process: " + new Date());
         filterChain.doFilter(request, response);

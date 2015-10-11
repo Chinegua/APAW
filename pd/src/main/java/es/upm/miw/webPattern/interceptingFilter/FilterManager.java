@@ -1,7 +1,7 @@
 package es.upm.miw.webPattern.interceptingFilter;
 
-import es.upm.miw.webPattern.Request;
-import es.upm.miw.webPattern.Response;
+import es.upm.miw.http.HttpRequest;
+import es.upm.miw.http.HttpResponse;
 
 public class FilterManager {
     FilterChain filterChain;
@@ -9,7 +9,7 @@ public class FilterManager {
     public FilterManager() {
     }
 
-     public void doFilter(Request request, Response response) {
+     public void doFilter(HttpRequest request, HttpResponse response) {
          //Se procesa el request y se establece el Target y los Filters
          filterChain = new FilterChain(new Target());
          filterChain.addFilter(new TimeFilter());

@@ -1,9 +1,9 @@
-package es.upm.miw.webPattern;
+package es.upm.miw.http;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class Http {
+public class HttpData {
 
     private Map<String, String> headerParams;
 
@@ -11,7 +11,7 @@ public class Http {
 
     private Object body;
 
-    public Http() {
+    public HttpData() {
         cookies = new HashMap<>();
         headerParams = new HashMap<>();
     }
@@ -42,7 +42,7 @@ public class Http {
 
     @Override
     public String toString() {
-        return "[headerParams=" + headerParams + ", cookies=" + cookies + ", body=" + body + "]";
+        return "Headers: headerParams=" + headerParams + ", cookies=" + cookies + ", body=" + body + "]";
     }
 
 }

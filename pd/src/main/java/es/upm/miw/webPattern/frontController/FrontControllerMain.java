@@ -1,76 +1,61 @@
 package es.upm.miw.webPattern.frontController;
 
+import es.upm.miw.http.HttpMethod;
+import es.upm.miw.http.HttpRequest;
+
 public class FrontControllerMain {
-    private FrontController frontController;
 
-    public FrontControllerMain() {
-        frontController = new FrontController();
+    public void helper1() {
+        HttpRequest request = new HttpRequest("LocalHost", "Helper1", HttpMethod.GET);
+        new Client().send(request);
     }
 
-    public void helper1(){
-        Request request = new Request();
-        Response response = new Response();
-        request.setPath("Helper1");
-        frontController.doGet(request, response);        
-    }
-    
     public void helper1Action1(String param1) {
-        Request request = new Request();
-        Response response = new Response();
-        request.getParams().put("action", "action1");
-        request.getParams().put("param1", param1);
-        request.setPath("Helper1");
-        frontController.doPost(request, response);
-    }
-    
-    public void helper1Action2(String param2) {
-        Request request = new Request();
-        Response response = new Response();
-        request.getParams().put("action", "action2");
-        request.getParams().put("param2", param2);
-        request.setPath("Helper1");
-        frontController.doPost(request, response);
+        HttpRequest request = new HttpRequest("LocalHost", "Helper1", HttpMethod.POST);
+        request.addQueryParam("action", "action1");
+        request.addQueryParam("param1", param1);
+        new Client().send(request);
     }
 
-    public void helper2(){
-        Request request = new Request();
-        Response response = new Response();
-        request.setPath("Helper2");
-        frontController.doGet(request, response);        
+    public void helper1Action2(String param2) {
+        HttpRequest request = new HttpRequest("LocalHost", "Helper1", HttpMethod.POST);
+        request.addQueryParam("action", "action2");
+        request.addQueryParam("param2", param2);
+        new Client().send(request);
     }
-    
+
+    public void helper2() {
+        HttpRequest request = new HttpRequest("LocalHost", "Helper2", HttpMethod.GET);
+        new Client().send(request);
+    }
+
     public void helper2Action1(String param1) {
-        Request request = new Request();
-        Response response = new Response();
-        request.getParams().put("action", "action1");
-        request.getParams().put("param1", param1);
-        request.setPath("Helper2");
-        frontController.doPost(request, response);
+        HttpRequest request = new HttpRequest("LocalHost", "Helper2", HttpMethod.POST);
+        request.addQueryParam("action", "action1");
+        request.addQueryParam("param1", param1);
+        new Client().send(request);
     }
-    
-    public void helper3(){
-        Request request = new Request();
-        Response response = new Response();
-        request.setPath("Helper3");
-        frontController.doGet(request, response);        
+
+    public void helper3() {
+        HttpRequest request = new HttpRequest("LocalHost", "Helper3", HttpMethod.GET);
+        new Server().send(request);
     }
-   
 
     public static void main(String[] args) {
         FrontControllerMain main = new FrontControllerMain();
-        System.out.println("-------ooo  Helper1  ooo------------------------------------");
+        System.out.println("-------  Helper1  ------------------------------------");
         main.helper1();
-        System.out.println("-------ooo  Helper1:action1  ooo----------------------------");
+        System.out.println("-------  Helper1:action1  ----------------------------");
         main.helper1Action1("param");
-        System.out.println("-------ooo  Helper1:action2  ooo----------------------------");
+        System.out.println("-------  Helper1:action2  ----------------------------");
         main.helper1Action2("param");
-        System.out.println("-------ooo  Helper2  ooo------------------------------------");
+        System.out.println("-------  Helper2  ------------------------------------");
         main.helper2();
-        System.out.println("-------ooo  Helper2:action1  ooo----------------------------");
+        System.out.println("-------  Helper2:action1  ----------------------------");
         main.helper2Action1("1");
-        System.out.println("-------ooo  Helper3  ooo------------------------------------");
+        System.out.println("-------  Helper3  ------------------------------------");
         main.helper3();
-        System.out.println("---------------------ooooo----------------------------------");
+        System.out.println("-------------------------------------------------------");
     }
 
 }

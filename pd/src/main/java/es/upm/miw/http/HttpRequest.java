@@ -1,9 +1,9 @@
-package es.upm.miw.webPattern;
+package es.upm.miw.http;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class Request extends Http {
+public class HttpRequest extends HttpData {
 
     private String host;
 
@@ -13,15 +13,15 @@ public class Request extends Http {
 
     private Map<String, String> queryParams;
 
-    public Request(String host, String path, HttpMethod method) {
+    public HttpRequest(String host, String path, HttpMethod method) {
         this.host = host;
         this.path = path;
         this.method = method;
         queryParams = new HashMap<>();
     }
 
-    public Request() {
-        this("//localhost", "/", HttpMethod.GET);
+    public HttpRequest() {
+        this("localhost", "", HttpMethod.GET);
     }
 
     public String getHost() {
@@ -58,9 +58,9 @@ public class Request extends Http {
 
     @Override
     public String toString() {
-        String result = method.toString() + " " + path + this.queryParams() + " HTTP/1.1\n";
-        result += "Host: " + host + "\n";
-        result += "Headers: " + super.toString();
+        String result = method.toString() + " /" + path + this.queryParams() + " HTTP/1.1\n";
+        result += "Host: //" + host + "\n";
+        result += super.toString();
         return result;
     }
 

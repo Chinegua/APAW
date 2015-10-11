@@ -1,49 +1,52 @@
 package es.upm.miw.webPattern.frontController;
 
+import es.upm.miw.http.HttpRequest;
+import es.upm.miw.http.HttpResponse;
+
 public class Dispatcher {
 
-    public void get(Request request, Response response) {
+    public void doGet(HttpRequest request, HttpResponse response) {
         Model model = new Model();
-        String controller = request.getPath() + "Controller";
+        String controller = request.getPath() + "Presenter";
         String nextView = request.getPath() + "View";
 
         switch (controller) {
-        case "Helper1Controller":
-            Helper1Controller helper1Controller = new Helper1Controller();
-            nextView = helper1Controller.process(model);
+        case "Helper1Presenter":
+            Helper1Presenter helper1Presenter = new Helper1Presenter();
+            nextView = helper1Presenter.process(model);
             break;
-        case "Helper2Controller":
-            Helper2Controller helper2Controller = new Helper2Controller();
-            nextView = helper2Controller.process(model);
+        case "Helper2Presenter":
+            Helper2Presenter helper2Presenter = new Helper2Presenter();
+            nextView = helper2Presenter.process(model);
             break;
         }
         this.show(nextView, model);
     }
 
-    public void post(Request request, Response response) {
+    public void doPost(HttpRequest request, HttpResponse response) {
         Model model = new Model();
-        String controller = request.getPath() + "Controller";
+        String controller = request.getPath() + "Presenter";
         String action = request.getParams().get("action");
         String nextView = request.getPath() + "View";
 
         switch (controller) {
-        case "Helper1Controller":
-            Helper1Controller helper1Controller = new Helper1Controller();
+        case "Helper1Presenter":
+            Helper1Presenter helper1Presenter = new Helper1Presenter();
             if ("action1".equals(action)) {
-                helper1Controller.setParam1((request.getParams().get("param1")));
-                nextView = helper1Controller.action1(model);
+                helper1Presenter.setParam1((request.getParams().get("param1")));
+                nextView = helper1Presenter.action1(model);
             } else if ("action2".equals(action)) {
-                helper1Controller.setParam2((request.getParams().get("param2")));
-                nextView = helper1Controller.action2(model);
+                helper1Presenter.setParam2((request.getParams().get("param2")));
+                nextView = helper1Presenter.action2(model);
             } else {
                 model.put("error", "Acción no permitida: " + action);
             }
             break;
-        case "Helper2Controller":
-            Helper2Controller helper2Controller = new Helper2Controller();
+        case "Helper2Presenter":
+            Helper2Presenter helper2Presenter = new Helper2Presenter();
             if ("action1".equals(action)) {
-                helper2Controller.setParam1(Integer.valueOf(request.getParams().get("param1")));
-                nextView = helper2Controller.action1(model);
+                helper2Presenter.setParam1(Integer.valueOf(request.getParams().get("param1")));
+                nextView = helper2Presenter.action1(model);
             } else {
                 model.put("error", "Acción no permitida: " + action);
             }

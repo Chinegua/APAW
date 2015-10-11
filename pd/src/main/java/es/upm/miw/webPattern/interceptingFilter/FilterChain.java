@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import es.upm.miw.webPattern.Request;
-import es.upm.miw.webPattern.Response;
+import es.upm.miw.http.HttpRequest;
+import es.upm.miw.http.HttpResponse;
 
 public class FilterChain {
     private List<Filter> filters;
@@ -24,7 +24,7 @@ public class FilterChain {
         iterator = filters.iterator();
     }
 
-    public void doFilter(Request request, Response response) {
+    public void doFilter(HttpRequest request, HttpResponse response) {
         if (iterator.hasNext()) {
           iterator.next().doFilter(request,response, this);
         } else {

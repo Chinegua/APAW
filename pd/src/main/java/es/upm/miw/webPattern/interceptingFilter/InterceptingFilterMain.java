@@ -1,15 +1,15 @@
 package es.upm.miw.webPattern.interceptingFilter;
 
-import es.upm.miw.webPattern.HttpMethod;
-import es.upm.miw.webPattern.Request;
-import es.upm.miw.webPattern.Response;
+import es.upm.miw.http.HttpMethod;
+import es.upm.miw.http.HttpRequest;
+import es.upm.miw.http.HttpResponse;
 
 public class InterceptingFilterMain {
     public static void main(String[] args) {
-        Request request = new Request("//LocalHost", "/public", HttpMethod.GET);
+        HttpRequest request = new HttpRequest("LocalHost", "public", HttpMethod.GET);
         System.out.println(request.toString() + "\n");
 
-        Response response = new Client().send(request);
+        HttpResponse response = new Client().send(request);
 
         System.out.println("\n" + response);
     }

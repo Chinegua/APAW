@@ -1,4 +1,4 @@
-package es.upm.miw.webPattern;
+package es.upm.miw.http;
 
 public enum HttpStatus {
     OK(200), CREATED(201), NO_CONTENT(204), 

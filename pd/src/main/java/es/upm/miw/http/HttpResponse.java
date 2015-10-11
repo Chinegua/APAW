@@ -1,10 +1,10 @@
-package es.upm.miw.webPattern;
+package es.upm.miw.http;
 
-public class Response extends Http {
+public class HttpResponse extends HttpData {
 
     private HttpStatus status;
 
-    public Response() {
+    public HttpResponse() {
     }
 
     public HttpStatus getStatus() {

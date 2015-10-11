@@ -1,4 +1,4 @@
-package es.upm.miw.webPattern.interceptingFilter;
+package es.upm.miw.webPattern.frontController;
 
 import es.upm.miw.http.HttpRequest;
 import es.upm.miw.http.HttpResponse;
