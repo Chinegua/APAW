@@ -1,12 +1,15 @@
 package es.upm.miw.webPattern.interceptingFilter;
 
+import es.upm.miw.webPattern.Request;
+import es.upm.miw.webPattern.Response;
+
 public class DebugFilter extends Filter {
 
     @Override
     public void doFilter(Request request, Response response, FilterChain filterChain) {
-        System.out.println("Debuging pre-process: " + request + "," + response);
+        System.out.println("Debuging pre-process...");
         filterChain.doFilter(request, response);
-        response.getHeaders().put("d","DebugFilter");
-        System.out.println("Debuging post-process: " + request + "," + response);
+        response.getHeaderParams().put("debug", "DebugFilter");
+        System.out.println("Debuging post-process...");
     }
 }

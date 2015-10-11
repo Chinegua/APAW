@@ -1,13 +1,12 @@
 package es.upm.miw.webPattern.interceptingFilter;
 
+import es.upm.miw.webPattern.Request;
+import es.upm.miw.webPattern.Response;
+
 public class Client {
-    FilterManager filterManager;
 
-    public void setFilterManager(FilterManager filterManager) {
-        this.filterManager = filterManager;
+    public Response send(Request request) {
+        return new Server().send(request);
     }
 
-    public void sendRequest(Request request, Response response) {
-        filterManager.filterRequest(request, response);
-    }
 }

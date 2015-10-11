@@ -1,7 +1,10 @@
 package es.upm.miw.webPattern.interceptingFilter;
 
+import es.upm.miw.webPattern.Http;
+import es.upm.miw.webPattern.Response;
+
 public class Target {
-    public void execute(Request request, Response response) {
-        System.out.println("Executing TARGET:" + request + ", " + response);
+    public void execute(Http request, Response response) {
+        System.out.println("---------> Executing TARGET...");
     }
 }
