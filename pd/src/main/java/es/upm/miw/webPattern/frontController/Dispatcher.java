@@ -7,10 +7,10 @@ public class Dispatcher {
 
     public void doGet(HttpRequest request, HttpResponse response) {
         Model model = new Model();
-        String controller = request.getPath() + "Presenter";
+        String presenter = request.getPath() + "Presenter";
         String nextView = request.getPath() + "View";
 
-        switch (controller) {
+        switch (presenter) {
         case "Helper1Presenter":
             Helper1Presenter helper1Presenter = new Helper1Presenter();
             nextView = helper1Presenter.process(model);
@@ -25,11 +25,11 @@ public class Dispatcher {
 
     public void doPost(HttpRequest request, HttpResponse response) {
         Model model = new Model();
-        String controller = request.getPath() + "Presenter";
+        String presenter = request.getPath() + "Presenter";
         String action = request.getParams().get("action");
         String nextView = request.getPath() + "View";
 
-        switch (controller) {
+        switch (presenter) {
         case "Helper1Presenter":
             Helper1Presenter helper1Presenter = new Helper1Presenter();
             if ("action1".equals(action)) {
