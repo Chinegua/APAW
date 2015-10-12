@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import es.upm.miw.http.HttpRequest;
-import es.upm.miw.http.HttpResponse;
+import es.upm.miw.web.http.HttpRequest;
+import es.upm.miw.web.http.HttpResponse;
 
 public class FilterChain {
     private List<Filter> filters;

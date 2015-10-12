@@ -1,4 +1,4 @@
-package es.upm.miw.http;
+package es.upm.miw.web.http;
 
 public class HttpResponse extends HttpBase {
 

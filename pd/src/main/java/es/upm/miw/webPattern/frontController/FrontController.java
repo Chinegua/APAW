@@ -1,7 +1,7 @@
 package es.upm.miw.webPattern.frontController;
 
-import es.upm.miw.http.HttpRequest;
-import es.upm.miw.http.HttpResponse;
+import es.upm.miw.web.http.HttpRequest;
+import es.upm.miw.web.http.HttpResponse;
 
 public class FrontController {
     private Dispatcher dispatcher;

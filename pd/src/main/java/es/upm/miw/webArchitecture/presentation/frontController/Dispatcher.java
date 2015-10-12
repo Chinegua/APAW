@@ -1,7 +1,7 @@
 package es.upm.miw.webArchitecture.presentation.frontController;
 
-import es.upm.miw.http.HttpRequest;
-import es.upm.miw.http.HttpResponse;
+import es.upm.miw.web.http.HttpRequest;
+import es.upm.miw.web.http.HttpResponse;
 import es.upm.miw.webArchitecture.presentation.models.Model;
 import es.upm.miw.webArchitecture.presentation.presenters.UI1Presenter;
 import es.upm.miw.webArchitecture.presentation.presenters.UI2Presenter;

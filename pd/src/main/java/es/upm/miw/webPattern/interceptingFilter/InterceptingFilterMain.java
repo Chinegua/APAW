@@ -1,8 +1,8 @@
 package es.upm.miw.webPattern.interceptingFilter;
 
-import es.upm.miw.http.HttpMethod;
-import es.upm.miw.http.HttpRequest;
-import es.upm.miw.http.HttpResponse;
+import es.upm.miw.web.http.HttpMethod;
+import es.upm.miw.web.http.HttpRequest;
+import es.upm.miw.web.http.HttpResponse;
 
 public class InterceptingFilterMain {
     public static void main(String[] args) {

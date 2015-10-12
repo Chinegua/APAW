@@ -1,7 +1,7 @@
 package es.upm.miw.webPattern.frontController;
 
-import es.upm.miw.http.HttpMethod;
-import es.upm.miw.http.HttpRequest;
+import es.upm.miw.web.http.HttpMethod;
+import es.upm.miw.web.http.HttpRequest;
 
 public class FrontControllerMain {
 

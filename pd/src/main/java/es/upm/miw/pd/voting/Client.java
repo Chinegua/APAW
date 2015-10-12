@@ -1,4 +1,4 @@
-package es.upm.miw.webPattern.frontController;
+package es.upm.miw.pd.voting;
 
 import es.upm.miw.web.http.HttpRequest;
 import es.upm.miw.web.http.HttpResponse;

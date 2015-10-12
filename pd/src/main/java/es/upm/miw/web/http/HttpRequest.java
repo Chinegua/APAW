@@ -1,4 +1,4 @@
-package es.upm.miw.http;
+package es.upm.miw.web.http;
 
 import java.util.HashMap;
 import java.util.Map;

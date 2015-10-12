@@ -1,4 +1,4 @@
-package es.upm.miw.http;
+package es.upm.miw.web.http;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -42,7 +42,7 @@ public class HttpBase {
 
     @Override
     public String toString() {
-        return "Headers: headerParams=" + headerParams + ", cookies=" + cookies + ", body=" + body + "]";
+        return "Headers: headerParams=" + headerParams + ", cookies=" + cookies + ", body=" + body;
     }
 
 }
