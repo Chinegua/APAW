@@ -1,6 +1,6 @@
 package es.upm.miw.http;
 
-public class HttpResponse extends HttpData {
+public class HttpResponse extends HttpBase {
 
     private HttpStatus status;
 

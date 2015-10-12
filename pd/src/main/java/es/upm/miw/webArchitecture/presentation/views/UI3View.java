@@ -7,7 +7,7 @@ public class UI3View implements View{
     @Override
     public void show(Model model) {
         System.out.println("UI3View");
-        System.out.println(model.get("log"));
+        System.out.println("   " + model.get("log"));
     }
 
 }

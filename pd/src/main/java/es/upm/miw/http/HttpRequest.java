@@ -3,7 +3,7 @@ package es.upm.miw.http;
 import java.util.HashMap;
 import java.util.Map;
 
-public class HttpRequest extends HttpData {
+public class HttpRequest extends HttpBase {
 
     private String host;
 

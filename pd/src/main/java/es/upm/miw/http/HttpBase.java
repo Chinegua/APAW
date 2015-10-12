@@ -3,7 +3,7 @@ package es.upm.miw.http;
 import java.util.HashMap;
 import java.util.Map;
 
-public class HttpData {
+public class HttpBase {
 
     private Map<String, String> headerParams;
 
@@ -11,7 +11,7 @@ public class HttpData {
 
     private Object body;
 
-    public HttpData() {
+    public HttpBase() {
         cookies = new HashMap<>();
         headerParams = new HashMap<>();
     }
