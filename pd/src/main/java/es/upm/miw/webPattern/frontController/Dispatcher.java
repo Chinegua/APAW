@@ -13,11 +13,12 @@ public class Dispatcher {
         switch (presenter) {
         case "Helper1Presenter":
             Helper1Presenter helper1Presenter = new Helper1Presenter();
-            //Injectar parámetros
+            //Injectar parámetros mediante helper1Presenter.setters()
             nextView = helper1Presenter.process(model);
             break;
         case "Helper2Presenter":
             Helper2Presenter helper2Presenter = new Helper2Presenter();
+            //Injectar parámetros mediante helper2Presenter.setters()
             nextView = helper2Presenter.process(model);
             break;
         }
@@ -35,9 +36,11 @@ public class Dispatcher {
             Helper1Presenter helper1Presenter = new Helper1Presenter();
             if ("action1".equals(action)) {
                 helper1Presenter.setParam1((request.getParams().get("param1")));
+                //Injectar parámetros mediante helper1Presenter.setters()
                 nextView = helper1Presenter.action1(model);
             } else if ("action2".equals(action)) {
                 helper1Presenter.setParam2((request.getParams().get("param2")));
+                //Injectar parámetros mediante helper2Presenter.setters()
                 nextView = helper1Presenter.action2(model);
             } else {
                 model.put("error", "Acción no permitida: " + action);
