@@ -47,15 +47,15 @@ public class VotingMain {
     public static void main(String[] args) {
         DaoFactory.setFactory(new DaoFactoryMemory());
         VotingMain main = new VotingMain();
-        System.out.println("-------Voting----------------------------");
+        System.out.println("-------Voting--------------------------------------------------------");
         main.voting();
-        System.out.println("-------ThemeManager----------------------------");
+        System.out.println("-------ThemeManager--------------------------------------------------");
         main.themeManager();
         System.out.println("---");
         main.themeManagerCreateTheme("Tema1");
         System.out.println("---");
         main.themeManagerCreateTheme("Tema2");
-        System.out.println("-------Voting----------------------------");
+        System.out.println("-------Voting--------------------------------------------------------");
         main.votingVoteTheme("Tema1", 4);
         System.out.println("---");
         main.votingVoteTheme("Tema1", 6);
@@ -63,7 +63,6 @@ public class VotingMain {
         main.votingVoteTheme("Tema1", 5);
         System.out.println("---");
         main.votingVoteTheme("Tema2", 5);
-        System.out.println("-------------------------------------------------");
     }
 
 }
