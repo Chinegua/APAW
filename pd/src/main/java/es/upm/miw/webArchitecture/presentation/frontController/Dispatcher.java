@@ -14,7 +14,7 @@ import es.upm.miw.webArchitecture.presentation.views.View;
 
 public class Dispatcher {
 
-    public void get(HttpRequest request, HttpResponse response) {
+    public void doGet(HttpRequest request, HttpResponse response) {
         Model model = new Model();
         String presenter = request.getPath() + "Presenter";
         String nextView = request.getPath() + "View";
@@ -36,7 +36,7 @@ public class Dispatcher {
         this.show(nextView, model);
     }
 
-    public void post(HttpRequest request, HttpResponse response) {
+    public void doPost(HttpRequest request, HttpResponse response) {
         Model model = new Model();
         String controller = request.getPath() + "Presenter";
         String action = request.getParams().get("action");

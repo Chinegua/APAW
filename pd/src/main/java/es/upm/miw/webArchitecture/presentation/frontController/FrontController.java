@@ -11,11 +11,11 @@ public class FrontController {
     }
 
     public void doGet(HttpRequest request, HttpResponse response) {
-        dispatcher.get(request, response);
+        dispatcher.doGet(request, response);
     }
     
     public void doPost(HttpRequest request, HttpResponse response) {
-        dispatcher.post(request, response);
+        dispatcher.doPost(request, response);
     }
 
 }
