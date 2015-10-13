@@ -1,7 +1,7 @@
 package es.upm.miw.webPattern.dao.daos;
 
 public abstract class DaoFactory {
-    
+
     public static DaoFactory factory = null;
 
     public static void setFactory(DaoFactory factory) {
@@ -14,10 +14,13 @@ public abstract class DaoFactory {
     }
 
     public abstract UserDao getUserDao();
-    
+
     public abstract AddressDao getAddressDao();
+
     public abstract CategoryDao getCategoryDao();
+
     public abstract PhoneDao getPhoneDao();
+
     public abstract VehicleDao getVehicleDao();
 
 }

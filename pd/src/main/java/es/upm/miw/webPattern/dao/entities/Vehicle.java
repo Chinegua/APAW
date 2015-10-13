@@ -1,5 +1,7 @@
 package es.upm.miw.webPattern.dao.entities;
 
+import java.util.List;
+
 public class Vehicle {
 
     private int id;
@@ -8,7 +10,7 @@ public class Vehicle {
 
     private String description;
 
-    private User user;
+    private List<User> users;
 
     public Vehicle() {
     }
@@ -37,12 +39,12 @@ public class Vehicle {
         this.description = description;
     }
 
-    public User getUser() {
-        return user;
+    public List<User> getUsers() {
+        return users;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUsers(List<User> users) {
+        this.users = users;
     }
 
 }
