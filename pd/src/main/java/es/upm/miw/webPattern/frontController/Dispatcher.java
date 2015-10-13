@@ -13,6 +13,7 @@ public class Dispatcher {
         switch (presenter) {
         case "Helper1Presenter":
             Helper1Presenter helper1Presenter = new Helper1Presenter();
+            //Injectar parámetros
             nextView = helper1Presenter.process(model);
             break;
         case "Helper2Presenter":

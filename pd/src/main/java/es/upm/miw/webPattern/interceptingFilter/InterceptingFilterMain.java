@@ -6,7 +6,7 @@ import es.upm.miw.web.http.HttpResponse;
 
 public class InterceptingFilterMain {
     public static void main(String[] args) {
-        HttpRequest request = new HttpRequest("LocalHost", "public", HttpMethod.GET);
+        HttpRequest request = new HttpRequest("LocalHost", "private", HttpMethod.GET);
         System.out.println(request.toString() + "\n");
 
         HttpResponse response = new Client().send(request);
