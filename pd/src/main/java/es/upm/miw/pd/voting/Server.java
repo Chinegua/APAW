@@ -1,6 +1,6 @@
 package es.upm.miw.pd.voting;
 
-import es.upm.miw.pd.voting.solution.presentation.frontController.FrontController;
+import es.upm.miw.pd.voting.solution.web.presentation.frontController.FrontController;
 import es.upm.miw.web.http.HttpMethod;
 import es.upm.miw.web.http.HttpRequest;
 import es.upm.miw.web.http.HttpResponse;

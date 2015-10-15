@@ -1,10 +1,11 @@
-package es.upm.miw.webPattern.dao.daos.memory;
+package es.upm.miw.webArchitecture.rest.data.models.daos.memory;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import es.upm.miw.pd.voting.solution.rest.data.models.daos.GenericDao;
+import es.upm.miw.webArchitecture.rest.data.models.daos.GenericDao;
+
 
 public abstract class GenericMemoryDao<T, ID> implements GenericDao<T, ID> {
 
